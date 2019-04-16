@@ -1,0 +1,8 @@
+prefix=/home/lutkus/eece-5554/final_project/visualization/catkin_ws/install
+
+Name: imu_indoor_nav
+Description: Description of imu_indoor_nav
+Version: 0.0.0
+Cflags: 
+Libs: -L/home/lutkus/eece-5554/final_project/visualization/catkin_ws/install/lib 
+Requires: 

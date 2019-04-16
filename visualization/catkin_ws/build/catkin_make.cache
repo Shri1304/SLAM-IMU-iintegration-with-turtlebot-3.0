@@ -1,0 +1,2 @@
+imu_indoor_nav
+-DCATKIN_DEVEL_PREFIX=/home/lutkus/eece-5554/final_project/visualization/catkin_ws/devel -DCMAKE_INSTALL_PREFIX=/home/lutkus/eece-5554/final_project/visualization/catkin_ws/install -G Unix Makefiles

@@ -1,0 +1,16 @@
+<launch>
+	<node name="goal_publisher_node" pkg="imu_indoor_nav" type="goal_publisher.py"/>
+	<node name="goal_input_node" pkg="imu_indoor_nav" type="goal_input_node.py" output="screen"/>
+	<node name="pose_publisher_node" pkg="imu_indoor_nav" type="pose_publisher.py"/>
+
+	<node pkg="tf" type="static_transform_publisher" name="link1_broadcaster" args="10 10 0 0 0 0 1 map link1 100" />
+
+    <arg name="map_file" default="/home/lutkus/map.yaml"/>
+
+    <!-- Map server -->
+    <node pkg="map_server" name="map_server" type="map_server" args="$(arg map_file)"/>
+
+    <!-- rviz -->
+    <node pkg="rviz" type="rviz" name="rviz" required="true"
+          args="-d $(find imu_indoor_nav)/rviz/imu_indoor_nav_custom.rviz"/>
+</launch>
